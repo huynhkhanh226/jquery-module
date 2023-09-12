@@ -1,0 +1,977 @@
+/*!
+ * FullCalendar v2.2.5 Stylesheet
+ * Docs & License: http://arshaw.com/fullcalendar/
+ * (c) 2013 Adam Shaw
+ */
+
+
+.cs {
+	direction: ltr;
+	text-align: left;
+}
+
+.cs-rtl {
+	text-align: right;
+}
+
+body .cs { /* extra precedence to overcome jqui */
+	font-size: 1em;
+}
+
+
+/* Colors
+--------------------------------------------------------------------------------------------------*/
+
+.cs-unthemed th,
+.cs-unthemed td,
+.cs-unthemed hr,
+.cs-unthemed thead,
+.cs-unthemed tbody,
+.cs-unthemed .cs-row,
+.cs-unthemed .cs-popover {
+	border-color: #ddd;
+}
+
+.cs-unthemed .cs-popover {
+	background-color: #fff;
+}
+
+.cs-unthemed hr,
+.cs-unthemed .cs-popover .cs-header {
+	background: #eee;
+}
+
+.cs-unthemed .cs-popover .cs-header .cs-close {
+	color: #666;
+}
+
+.cs-unthemed .cs-today {
+	background: #fcf8e3;
+}
+
+.cs-highlight { /* when user is selecting cells */
+	background: #bce8f1;
+	opacity: .3;
+	filter: alpha(opacity=30); /* for IE */
+}
+
+.cs-bgevent { /* default look for background events */
+	background: rgb(143, 223, 130);
+	opacity: .3;
+	filter: alpha(opacity=30); /* for IE */
+}
+
+.cs-nonbusiness { /* default look for non-business-hours areas */
+	/* will inherit .cs-bgevent's styles */
+	background: #ccc;
+}
+
+
+/* Icons (inline elements with styled text that mock arrow icons)
+--------------------------------------------------------------------------------------------------*/
+
+.cs-icon {
+	display: inline-block;
+	font-size: 2em;
+	line-height: .5em;
+	height: .5em; /* will make the total height 1em */
+
+}
+
+.cs-icon-left-single-arrow:after {
+	content: "\02039";
+	font-weight: bold;
+}
+
+.cs-icon-right-single-arrow:after {
+	content: "\0203A";
+	font-weight: bold;
+}
+
+.cs-icon-left-double-arrow:after {
+	content: "\000AB";
+}
+
+.cs-icon-right-double-arrow:after {
+	content: "\000BB";
+}
+
+.cs-icon-x:after {
+	content: "\000D7";
+}
+
+
+/* Buttons (styled <button> tags, normalized to work cross-browser)
+--------------------------------------------------------------------------------------------------*/
+
+.cs button {
+	/* force height to include the border and padding */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	/* dimensions */
+	margin: 0;
+	height: 2.1em;
+	padding: 0 .6em;
+
+	/* text & cursor */
+	font-size: 1em; /* normalize */
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+/* Firefox has an annoying inner border */
+.cs button::-moz-focus-inner { margin: 0; padding: 0; }
+	
+.cs-state-default { /* non-theme */
+	border: 1px solid;
+}
+
+.cs-state-default.cs-corner-left { /* non-theme */
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.cs-state-default.cs-corner-right { /* non-theme */
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+/* icons in buttons */
+
+.cs button .cs-icon { /* non-theme */
+	position: relative;
+	top: .05em; /* seems to be a good adjustment across browsers */
+	margin: 0 .1em;
+}
+	
+/*
+  button states
+  borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
+*/
+
+.cs-state-default {
+	background-color: #f5f5f5;
+	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-repeat: repeat-x;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #333;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cs-state-hover,
+.cs-state-down,
+.cs-state-active,
+.cs-state-disabled {
+	color: #333333;
+	background-color: #e6e6e6;
+}
+
+.cs-state-hover {
+	color: #333333;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position 0.1s linear;
+	   -moz-transition: background-position 0.1s linear;
+	     -o-transition: background-position 0.1s linear;
+	        transition: background-position 0.1s linear;
+}
+
+.cs-state-down,
+.cs-state-active {
+	background-color: #cccccc;
+	background-image: none;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cs-state-disabled {
+	cursor: default;
+	background-image: none;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	box-shadow: none;
+}
+
+
+/* Buttons Groups
+--------------------------------------------------------------------------------------------------*/
+
+.cs-button-group {
+	display: inline-block;
+}
+
+/*
+every button that is not first in a button group should scootch over one pixel and cover the
+previous button's border...
+*/
+
+.cs .cs-button-group > * { /* extra precedence b/c buttons have margin set to zero */
+	float: left;
+	margin: 0 0 0 -1px;
+}
+
+.cs .cs-button-group > :first-child { /* same */
+	margin-left: 0;
+}
+
+
+/* Popover
+--------------------------------------------------------------------------------------------------*/
+
+.cs-popover {
+	position: absolute;
+	box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+.cs-popover .cs-header {
+	padding: 2px 4px;
+}
+
+.cs-popover .cs-header .cs-title {
+	margin: 0 2px;
+}
+
+.cs-popover .cs-header .cs-close {
+	cursor: pointer;
+}
+
+.cs-ltr .cs-popover .cs-header .cs-title,
+.cs-rtl .cs-popover .cs-header .cs-close {
+	float: left;
+}
+
+.cs-rtl .cs-popover .cs-header .cs-title,
+.cs-ltr .cs-popover .cs-header .cs-close {
+	float: right;
+}
+
+/* unthemed */
+
+.cs-unthemed .cs-popover {
+	border-width: 1px;
+	border-style: solid;
+}
+
+.cs-unthemed .cs-popover .cs-header .cs-close {
+	font-size: 25px;
+	margin-top: 4px;
+}
+
+/* jqui themed */
+
+.cs-popover > .ui-widget-header + .ui-widget-content {
+	border-top: 0; /* where they meet, let the header have the border */
+}
+
+
+/* Misc Reusable Components
+--------------------------------------------------------------------------------------------------*/
+
+.cs hr {
+	height: 0;
+	margin: 0;
+	padding: 0 0 2px; /* height is unreliable across browsers, so use padding */
+	border-style: solid;
+	border-width: 1px 0;
+}
+
+.cs-clear {
+	clear: both;
+}
+
+.cs-bg,
+.cs-bgevent-skeleton,
+.cs-highlight-skeleton,
+.cs-helper-skeleton {
+	/* these element should always cling to top-left/right corners */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.cs-bg {
+	bottom: 0; /* strech bg to bottom edge */
+}
+
+.cs-bg table {
+	height: 100%; /* strech bg to bottom edge */
+}
+
+
+/* Tables
+--------------------------------------------------------------------------------------------------*/
+
+.cs table {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 1em; /* normalize cross-browser */
+}
+
+.cs th {
+	text-align: center;
+}
+
+.cs th,
+.cs td {
+	border-style: solid;
+	border-width: 1px;
+	padding: 0;
+	vertical-align: top;
+}
+
+.cs td.cs-today {
+	border-style: double; /* overcome neighboring borders */
+}
+
+
+/* Fake Table Rows
+--------------------------------------------------------------------------------------------------*/
+
+.cs .cs-row { /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
+	/* no visible border by default. but make available if need be (scrollbar width compensation) */
+	border-style: solid;
+	border-width: 0;
+}
+
+.cs-row table {
+	/* don't put left/right border on anything within a fake row.
+	   the outer tbody will worry about this */
+	border-left: 0 hidden transparent;
+	border-right: 0 hidden transparent;
+
+	/* no bottom borders on rows */
+	border-bottom: 0 hidden transparent; 
+}
+
+.cs-row:first-child table {
+	border-top: 0 hidden transparent; /* no top border on first row */
+}
+
+
+/* Day Row (used within the header and the DayGrid)
+--------------------------------------------------------------------------------------------------*/
+
+.cs-row {
+	position: relative;
+}
+
+.cs-row .cs-bg {
+	z-index: 1;
+}
+
+/* highlighting cells & background event skeleton */
+
+.cs-row .cs-bgevent-skeleton,
+.cs-row .cs-highlight-skeleton {
+	bottom: 0; /* stretch skeleton to bottom of row */
+}
+
+.cs-row .cs-bgevent-skeleton table,
+.cs-row .cs-highlight-skeleton table {
+	height: 100%; /* stretch skeleton to bottom of row */
+}
+
+.cs-row .cs-highlight-skeleton td,
+.cs-row .cs-bgevent-skeleton td {
+	border-color: transparent;
+}
+
+.cs-row .cs-bgevent-skeleton {
+	z-index: 2;
+
+}
+
+.cs-row .cs-highlight-skeleton {
+	z-index: 3;
+}
+
+/*
+row content (which contains day/week numbers and events) as well as "helper" (which contains
+temporary rendered events).
+*/
+
+.cs-row .cs-content-skeleton {
+	position: relative;
+	z-index: 4;
+	padding-bottom: 2px; /* matches the space above the events */
+}
+
+.cs-row .cs-helper-skeleton {
+	z-index: 5;
+}
+
+.cs-row .cs-content-skeleton td,
+.cs-row .cs-helper-skeleton td {
+	/* see-through to the background below */
+	background: none; /* in case <td>s are globally styled */
+	border-color: transparent;
+
+	/* don't put a border between events and/or the day number */
+	border-bottom: 0;
+}
+
+.cs-row .cs-content-skeleton tbody td, /* cells with events inside (so NOT the day number cell) */
+.cs-row .cs-helper-skeleton tbody td {
+	/* don't put a border between event cells */
+	border-top: 0;
+}
+
+
+/* Scrolling Container
+--------------------------------------------------------------------------------------------------*/
+
+.cs-scroller { /* this class goes on elements for guaranteed vertical scrollbars */
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.cs-scroller > * { /* we expect an immediate inner element */
+	position: relative; /* re-scope all positions */
+	width: 100%; /* hack to force re-sizing this inner element when scrollbars appear/disappear */
+	overflow: hidden; /* don't let negative margins or absolute positioning create further scroll */
+}
+
+
+/* Global Event Styles
+--------------------------------------------------------------------------------------------------*/
+
+.cs-event {
+	position: relative; /* for resize handle and other inner positioning */
+	display: block; /* make the <a> tag block */
+	font-size: .85em;
+	line-height: 1.3;
+	border-radius: 3px;
+	border: 1px solid #3a87ad; /* default BORDER color */
+	background-color: #3a87ad; /* default BACKGROUND color */
+	font-weight: normal; /* undo jqui's ui-widget-header bold */
+}
+
+/* overpower some of bootstrap's and jqui's styles on <a> tags */
+.cs-event,
+.cs-event:hover,
+.ui-widget .cs-event {
+	color: #fff; /* default TEXT color */
+	text-decoration: none; /* if <a> has an href */
+}
+
+.cs-event[href],
+.cs-event.cs-draggable {
+	cursor: pointer; /* give events with links and draggable events a hand mouse pointer */
+}
+
+.cs-not-allowed, /* causes a "warning" cursor. applied on body */
+.cs-not-allowed .cs-event { /* to override an event's custom cursor */
+	cursor: not-allowed;
+}
+
+
+/* DayGrid events
+----------------------------------------------------------------------------------------------------
+We use the full "fc-day-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+
+.cs-day-grid-event {
+	margin: 1px 2px 0; /* spacing between events and edges */
+	padding: 0 1px;
+}
+
+/* events that are continuing to/from another week. kill rounded corners and butt up against edge */
+
+.cs-ltr .cs-day-grid-event.cs-not-start,
+.cs-rtl .cs-day-grid-event.cs-not-end {
+	margin-left: 0;
+	border-left-width: 0;
+	padding-left: 1px; /* replace the border with padding */
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.cs-ltr .cs-day-grid-event.cs-not-end,
+.cs-rtl .cs-day-grid-event.cs-not-start {
+	margin-right: 0;
+	border-right-width: 0;
+	padding-right: 1px; /* replace the border with padding */
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.cs-day-grid-event > .cs-content { /* force events to be one-line tall */
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.cs-day-grid-event .cs-time {
+	font-weight: bold;
+}
+
+/* resize handle (outside of fc-content, so can go outside of bounds) */
+
+.cs-day-grid-event .cs-resizer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 7px;
+}
+
+.cs-ltr .cs-day-grid-event .cs-resizer {
+	right: -3px;
+	cursor: e-resize;
+}
+
+.cs-rtl .cs-day-grid-event .cs-resizer {
+	left: -3px;
+	cursor: w-resize;
+}
+
+
+/* Event Limiting
+--------------------------------------------------------------------------------------------------*/
+
+/* "more" link that represents hidden events */
+
+a.cs-more {
+	margin: 1px 3px;
+	font-size: .85em;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a.cs-more:hover {
+	text-decoration: underline;
+}
+
+.cs-limited { /* rows and cells that are hidden because of a "more" link */
+	display: none;
+}
+
+/* popover that appears when "more" link is clicked */
+
+.cs-day-grid .cs-row {
+	z-index: 1; /* make the "more" popover one higher than this */
+}
+
+.cs-more-popover {
+	z-index: 2;
+	width: 220px;
+}
+
+.cs-more-popover .cs-event-container {
+	padding: 10px;
+}
+
+/* Toolbar
+--------------------------------------------------------------------------------------------------*/
+
+.cs-toolbar {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.cs-toolbar .cs-left {
+	float: left;
+}
+
+.cs-toolbar .cs-right {
+	float: right;
+}
+
+.cs-toolbar .cs-center {
+	display: inline-block;
+}
+
+/* the things within each left/right/center section */
+.cs .cs-toolbar > * > * { /* extra precedence to override button border margins */
+	float: left;
+	margin-left: .75em;
+}
+
+/* the first thing within each left/center/right section */
+.cs .cs-toolbar > * > :first-child { /* extra precedence to override button border margins */
+	margin-left: 0;
+}
+	
+/* title text */
+
+.cs-toolbar h2 {
+	margin: 0;
+}
+
+/* button layering (for border precedence) */
+
+.cs-toolbar button {
+	position: relative;
+}
+
+.cs-toolbar .cs-state-hover,
+.cs-toolbar .ui-state-hover {
+	z-index: 2;
+}
+	
+.cs-toolbar .cs-state-down {
+	z-index: 3;
+}
+
+.cs-toolbar .cs-state-active,
+.cs-toolbar .ui-state-active {
+	z-index: 4;
+}
+
+.cs-toolbar button:focus {
+	z-index: 5;
+}
+
+
+/* View Structure
+--------------------------------------------------------------------------------------------------*/
+
+/* undo twitter bootstrap's box-sizing rules. normalizes positioning techniques */
+/* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
+.cs-view-container *,
+.cs-view-container *:before,
+.cs-view-container *:after {
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
+}
+
+.cs-view, /* scope positioning and z-index's for everything within the view */
+.cs-view > table { /* so dragged elements can be above the view's main element */
+	position: relative;
+	z-index: 1;
+}
+
+/* BasicView
+--------------------------------------------------------------------------------------------------*/
+
+/* day row structure */
+
+.cs-basicWeek-view .cs-content-skeleton,
+.cs-basicDay-view .cs-content-skeleton {
+	/* we are sure there are no day numbers in these views, so... */
+	padding-top: 1px; /* add a pixel to make sure there are 2px padding above events */
+	padding-bottom: 1em; /* ensure a space at bottom of cell for user selecting/clicking */
+}
+
+.cs-basic-view tbody .cs-row {
+	min-height: 4em; /* ensure that all rows are at least this tall */
+}
+
+/* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
+
+.cs-row.cs-rigid {
+	overflow: hidden;
+}
+
+.cs-row.cs-rigid .cs-content-skeleton {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+/* week and day number styling */
+
+.cs-basic-view .cs-week-number,
+.cs-basic-view .cs-day-number {
+	padding: 0 2px;
+}
+
+.cs-basic-view td.cs-week-number span,
+.cs-basic-view td.cs-day-number {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.cs-basic-view .cs-week-number {
+	text-align: center;
+}
+
+.cs-basic-view .cs-week-number span {
+	/* work around the way we do column resizing and ensure a minimum width */
+	display: inline-block;
+	min-width: 1.25em;
+}
+
+.cs-ltr .cs-basic-view .cs-day-number {
+	text-align: right;
+}
+
+.cs-rtl .cs-basic-view .cs-day-number {
+	text-align: left;
+}
+
+.cs-day-number.cs-other-month {
+	opacity: 0.3;
+	filter: alpha(opacity=30); /* for IE */
+	/* opacity with small font can sometimes look too faded
+	   might want to set the 'color' property instead
+	   making day-numbers bold also fixes the problem */
+}
+
+/* AgendaView all-day area
+--------------------------------------------------------------------------------------------------*/
+
+.cs-agenda-view .cs-day-grid {
+	position: relative;
+	z-index: 2; /* so the "more.." popover will be over the time grid */
+}
+
+.cs-agenda-view .cs-day-grid .cs-row {
+	min-height: 3em; /* all-day section will never get shorter than this */
+}
+
+.cs-agenda-view .cs-day-grid .cs-row .cs-content-skeleton {
+	padding-top: 1px; /* add a pixel to make sure there are 2px padding above events */
+	padding-bottom: 1em; /* give space underneath events for clicking/selecting days */
+}
+
+
+/* TimeGrid axis running down the side (for both the all-day area and the slot area)
+--------------------------------------------------------------------------------------------------*/
+
+.cs .cs-axis { /* .cs to overcome default cell styles */
+	vertical-align: middle;
+	padding: 0 4px;
+	white-space: nowrap;
+}
+
+.cs-ltr .cs-axis {
+	text-align: right;
+}
+
+.cs-rtl .cs-axis {
+	text-align: left;
+}
+
+.ui-widget td.cs-axis {
+	font-weight: normal; /* overcome jqui theme making it bold */
+}
+
+
+/* TimeGrid Structure
+--------------------------------------------------------------------------------------------------*/
+
+.cs-time-grid-container, /* so scroll container's z-index is below all-day */
+.cs-time-grid { /* so slats/bg/content/etc positions get scoped within here */
+	position: relative;
+	z-index: 1;
+}
+
+.cs-time-grid {
+	min-height: 100%; /* so if height setting is 'auto', .cs-bg stretches to fill height */
+}
+
+.cs-time-grid table { /* don't put outer borders on slats/bg/content/etc */
+	border: 0 hidden transparent;
+}
+
+.cs-time-grid > .cs-bg {
+	z-index: 1;
+}
+
+.cs-time-grid .cs-slats,
+.cs-time-grid > hr { /* the <hr> AgendaView injects when grid is shorter than scroller */
+	position: relative;
+	z-index: 2;
+}
+
+.cs-time-grid .cs-bgevent-skeleton,
+.cs-time-grid .cs-content-skeleton {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.cs-time-grid .cs-bgevent-skeleton {
+	z-index: 3;
+}
+
+.cs-time-grid .cs-highlight-skeleton {
+	z-index: 4;
+}
+
+.cs-time-grid .cs-content-skeleton {
+	z-index: 5;
+}
+
+.cs-time-grid .cs-helper-skeleton {
+	z-index: 6;
+}
+
+
+/* TimeGrid Slats (lines that run horizontally)
+--------------------------------------------------------------------------------------------------*/
+
+.cs-slats td {
+	height: 1.5em;
+	border-bottom: 0; /* each cell is responsible for its top border */
+}
+
+.cs-slats .cs-minor td {
+	border-top-style: dotted;
+}
+
+.cs-slats .ui-widget-content { /* for jqui theme */
+	background: none; /* see through to fc-bg */
+}
+
+
+/* TimeGrid Highlighting Slots
+--------------------------------------------------------------------------------------------------*/
+
+.cs-time-grid .cs-highlight-container { /* a div within a cell within the fc-highlight-skeleton */
+	position: relative; /* scopes the left/right of the fc-highlight to be in the column */
+}
+
+.cs-time-grid .cs-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	/* top and bottom will be in by JS */
+}
+
+
+/* TimeGrid Event Containment
+--------------------------------------------------------------------------------------------------*/
+
+.cs-time-grid .cs-event-container, /* a div within a cell within the fc-content-skeleton */
+.cs-time-grid .cs-bgevent-container { /* a div within a cell within the fc-bgevent-skeleton */
+	position: relative;
+}
+
+.cs-ltr .cs-time-grid .cs-event-container { /* space on the sides of events for LTR (default) */
+	margin: 0 2.5% 0 2px;
+}
+
+.cs-rtl .cs-time-grid .cs-event-container { /* space on the sides of events for RTL */
+	margin: 0 2px 0 2.5%;
+}
+
+.cs-time-grid .cs-event,
+.cs-time-grid .cs-bgevent {
+	position: absolute;
+	z-index: 1; /* scope inner z-index's */
+}
+
+.cs-time-grid .cs-bgevent {
+	/* background events always span full width */
+	left: 0;
+	right: 0;
+}
+
+
+/* TimeGrid Event Styling
+----------------------------------------------------------------------------------------------------
+We use the full "fc-time-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+
+.cs-time-grid-event.cs-not-start { /* events that are continuing from another day */
+	/* replace space made by the top border with padding */
+	border-top-width: 0;
+	padding-top: 1px;
+
+	/* remove top rounded corners */
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.cs-time-grid-event.cs-not-end {
+	/* replace space made by the top border with padding */
+	border-bottom-width: 0;
+	padding-bottom: 1px;
+
+	/* remove bottom rounded corners */
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.cs-time-grid-event {
+	overflow: hidden; /* don't let the bg flow over rounded corners */
+}
+
+.cs-time-grid-event > .cs-content { /* contains the time and title, but no bg and resizer */
+	position: relative;
+	z-index: 2; /* above the bg */
+}
+
+.cs-time-grid-event .cs-time,
+.cs-time-grid-event .cs-title {
+	padding: 0 1px;
+}
+
+.cs-time-grid-event .cs-time {
+	font-size: .85em;
+	white-space: nowrap;
+}
+
+.cs-time-grid-event .cs-bg {
+	z-index: 1;
+	background: #fff;
+	opacity: .25;
+	filter: alpha(opacity=25); /* for IE */
+}
+
+/* short mode, where time and title are on the same line */
+
+.cs-time-grid-event.cs-short .cs-content {
+	/* don't wrap to second line (now that contents will be inline) */
+	white-space: nowrap;
+}
+
+.cs-time-grid-event.cs-short .cs-time,
+.cs-time-grid-event.cs-short .cs-title {
+	/* put the time and title on the same line */
+	display: inline-block;
+	vertical-align: top;
+}
+
+.cs-time-grid-event.cs-short .cs-time span {
+	display: none; /* don't display the full time text... */
+}
+
+.cs-time-grid-event.cs-short .cs-time:before {
+	content: attr(data-start); /* ...instead, display only the start time */
+}
+
+.cs-time-grid-event.cs-short .cs-time:after {
+	content: "\000A0-\000A0"; /* seperate with a dash, wrapped in nbsp's */
+}
+
+.cs-time-grid-event.cs-short .cs-title {
+	font-size: .85em; /* make the title text the same size as the time */
+	padding: 0; /* undo padding from above */
+}
+
+/* resizer */
+
+.cs-time-grid-event .cs-resizer {
+	position: absolute;
+	z-index: 3; /* above content */
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 8px;
+	overflow: hidden;
+	line-height: 8px;
+	font-size: 11px;
+
+	text-align: center;
+	cursor: s-resize;
+}
+
+.cs-time-grid-event .cs-resizer:after {
+	content: "=";
+}

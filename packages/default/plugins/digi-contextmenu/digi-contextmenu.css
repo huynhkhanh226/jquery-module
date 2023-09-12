@@ -1,0 +1,59 @@
+.btnGroupLW4{
+    display: block;
+    position: relative;
+}
+
+.btnGroupLW4 .dropdown-menu > li > a {
+    padding: 3px 15px ;
+    border-bottom: 1px dotted #c7d5e0;
+    width: 100%;
+    text-align: left !important;
+    line-height: 24px;
+}
+
+.btnGroupLW4 .dropdown-menu > li:last-child > a {
+    padding: 5px 15px;
+    border-bottom: none;
+
+}
+
+.btnGroupLW4 .dropdown-menu > li > a >i{
+    width: 13px;
+
+}
+
+.menuActionButton{
+    overflow: hidden;
+    width: 130px;
+    min-width: 100px;
+    border: 1px solid #c7d5e0;
+    /*opacity: 0.9;*/
+    /*background-color: #f2f6f7;*/
+}
+
+.btnButtonLW4 {
+    padding: 4px 6px !important;
+    border: none;
+    float: none !important;
+    /*background-color: #f2f6f7 !important;*/
+    border-radius: 50%;
+    font-size: 50% !important;
+    margin: 0 auto !important;
+    display: block;
+    position: relative
+}
+
+.btnButtonLW4:hover{
+    border: none !important;
+}
+
+
+
+.overflow-visible{
+    overflow: visible !important;
+}
+
+.menuActionButton:empty{
+    display: none;
+}
+

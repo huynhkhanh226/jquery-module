@@ -1,0 +1,149 @@
+[26-Apr-2016 13:30:59 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 708
+[26-Apr-2016 17:24:02 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:02 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:23 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:23 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:32 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:59 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:59 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:59 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:59 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:24:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:26:00 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:26:00 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:26:00 Asia/Ho_Chi_Minh] PHP Warning:  Uncaught exception 'PDOException' with message 'SQLSTATE[08001]: [Microsoft][SQL Server Native Client 11.0]Named Pipes Provider: Could not open a connection to SQL Server [53]. ' in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:47
+Stack trace:
+#0 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(47): PDO->__construct('sqlsrv:Server=d...', 'sa', '123', Array)
+#1 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\SqlServerConnector.php(29): Illuminate\Database\Connectors\Connector->createConnection('sqlsrv:Server=d...', Array, Array)
+#2 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(57): Illuminate\Database\Connectors\SqlServerConnector->connect(Array)
+#3 C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(46): Illuminate\Database\Connectors\ConnectionFactory->createSingleConnection(Array)
+#4 C:\webserve in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[26-Apr-2016 17:26:00 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php on line 47
+[27-Apr-2016 09:47:57 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 709
+[28-Apr-2016 16:17:52 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 709
+[28-Apr-2016 16:22:08 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 709
+[28-Apr-2016 16:28:17 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 709
+[29-Apr-2016 09:32:13 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 709
+[29-Apr-2016 14:17:11 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 709
+[29-Apr-2016 14:21:31 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 709
+[29-Apr-2016 14:26:26 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 709
+[04-May-2016 10:07:25 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected '<<' (T_SL), expecting ')' in C:\webserver\lw4\app\config\database.php on line 81
+[04-May-2016 10:08:40 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 631
+[04-May-2016 10:29:39 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 631
+[11-May-2016 13:57:45 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 636
+[11-May-2016 13:57:46 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 636
+[11-May-2016 13:58:34 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 636
+[23-Jun-2016 11:02:35 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[23-Jun-2016 11:16:47 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[28-Jun-2016 10:53:06 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[28-Jun-2016 14:06:08 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[28-Jun-2016 15:30:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function save() on a non-object in C:\webserver\lw4\app\controllers\W9X\W94\W94F1000Controller.php on line 84
+[28-Jun-2016 15:30:33 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function save() on a non-object in C:\webserver\lw4\app\controllers\W9X\W94\W94F1000Controller.php on line 84
+[28-Jun-2016 15:35:09 Asia/Ho_Chi_Minh] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://10.0.0.1:8000/ServiceModelSamples/service?wsdl' : failed to load external entity "http://10.0.0.1:8000/ServiceModelSamples/service?wsdl"
+ in C:\webserver\lw4\app\classes\Helpers.php on line 676
+[29-Jun-2016 11:15:10 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[29-Jun-2016 17:11:42 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[30-Jun-2016 13:20:53 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[30-Jun-2016 13:22:23 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[30-Jun-2016 13:22:35 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[30-Jun-2016 13:23:19 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[15-Jul-2016 13:23:56 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:06:52 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:07:42 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:07:42 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php on line 465
+[15-Jul-2016 14:09:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:09:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:09:17 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:14:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:15:45 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:15:45 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:18:26 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[15-Jul-2016 14:18:26 Asia/Ho_Chi_Minh] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\webserver\lw4\vendor\laravel\framework\src\Illuminate\Database\Connection.php on line 303
+[01-Aug-2016 14:40:09 Asia/Ho_Chi_Minh] PHP Fatal error:  SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://10.0.0.1:8000/ServiceModelSamples/service?wsdl' : failed to load external entity "http://10.0.0.1:8000/ServiceModelSamples/service?wsdl"
+ in C:\webserver\lw4\app\classes\Helpers.php on line 676
+[01-Aug-2016 14:44:51 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 14:48:26 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 15:59:10 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 16:05:22 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 16:21:57 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 16:52:11 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 16:57:25 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 16:58:46 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 17:00:21 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 17:01:07 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 17:02:20 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 659
+[01-Aug-2016 17:02:56 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 661
+[01-Aug-2016 17:03:29 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 661
+[01-Aug-2016 17:04:08 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 660
+[01-Aug-2016 17:05:09 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 660
+[01-Aug-2016 17:06:36 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 660
+[01-Aug-2016 17:09:34 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 660
+[01-Aug-2016 17:10:22 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 660
+[01-Aug-2016 17:10:53 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 660
+[01-Aug-2016 17:11:32 Asia/Ho_Chi_Minh] PHP Fatal error:  SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode in C:\webserver\lw4\app\classes\Helpers.php on line 661
+[21-Sep-2016 13:33:19 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function selectOne() on a non-object in C:\webserver\lw4\app\controllers\AuthController.php on line 188
+[21-Sep-2016 14:07:53 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function selectOne() on a non-object in C:\webserver\lw4\app\controllers\AuthController.php on line 188
+[21-Sep-2016 14:09:48 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function selectOne() on a non-object in C:\webserver\lw4\app\controllers\AuthController.php on line 188
+[21-Sep-2016 14:16:51 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function selectOne() on a non-object in C:\webserver\lw4\app\controllers\AuthController.php on line 189
+[21-Sep-2016 14:18:22 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function selectOne() on a non-object in C:\webserver\lw4\app\controllers\AuthController.php on line 190
+[21-Sep-2016 14:18:48 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function selectOne() on a non-object in C:\webserver\lw4\app\controllers\AuthController.php on line 190
+[21-Sep-2016 14:20:42 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function select() on a non-object in C:\webserver\lw4\app\controllers\AuthController.php on line 190
+[08-Nov-2018 15:36:22 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function format() on a non-object in D:\public_html\lw4_sp\app\classes\Helpers.php on line 633
+[26-Nov-2018 10:57:11 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function format() on a non-object in D:\public_html\lw4_sp\app\classes\Helpers.php on line 633
+[26-Nov-2018 11:25:09 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function format() on a non-object in D:\public_html\lw4_sp\app\classes\Helpers.php on line 633
+[26-Nov-2018 11:25:19 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function format() on a non-object in D:\public_html\lw4_sp\app\classes\Helpers.php on line 633
+[06-Dec-2018 16:15:08 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function delete() on a non-object in D:\public_html\lw4_sp\app\controllers\W7X\W75\W75F1010Controller.php on line 150
+[10-Dec-2018 10:59:50 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function format() on a non-object in D:\public_html\lw4_sp\app\classes\Helpers.php on line 633
+[14-Dec-2018 09:17:35 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to a member function format() on a non-object in D:\public_html\lw4_sp\app\classes\Helpers.php on line 633

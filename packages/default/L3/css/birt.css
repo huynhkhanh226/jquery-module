@@ -1,0 +1,75 @@
+.bgBlue{
+    background-color: blue;
+}
+.bgRed{
+    background-color: red;
+}
+
+#divBoard table th {
+    padding: 5px !important
+}
+
+#divBoard table tr td {
+    padding: 0px !important
+}
+#divScrollReport, #divReportType{
+    padding-top: 5px;
+}
+.birt .navbar {
+    background-color: #ffffff !important;
+}
+#divScrollReport .title, #divReportType .title{
+    /*background-color: #6AB6EB;*/
+    margin-left: -22px;
+    margin-right: -20px;
+    color: #ffffff;
+    padding: 5px 0px;
+}
+
+.three_dot_caption {
+    display: inline-block;
+    width: 700px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    margin-left: 0px;
+    pading-left: 0px;
+    color: #3C9FE5;
+}
+.text-gray{
+    color: #797676 !important;
+}
+.bg{
+    min-height: 100%;
+    overflow: auto;
+    height: 576px;
+    background-color: #eae8e8 !important;
+}
+.sub-bg{
+    min-height: 100%;
+    background-color: #eae8e8 !important;
+
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+hr {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    border: 0 !important;
+    border-top: 1px solid #55a8fd !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+    width: 100%;
+}
+.skin-blue .main-header .navbar {
+    background-color: #3c8dbc;
+    box-shadow: rgba(50, 50, 50, 0.75) 0px 0px 5px 0px !important;
+}
+

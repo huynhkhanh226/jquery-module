@@ -1,0 +1,16 @@
+.toolbar-menu {
+    display: inline-flex;
+    border: 1px solid #a2bed2;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #F2F5F7;
+}
+
+.none-border{
+    border:  none !important;
+}
+
+.none-background{
+    background: none !important;
+}
